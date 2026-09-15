@@ -1,0 +1,32 @@
+# Build outputs
+app/build/
+app/.cxx/
+build/
+.gradle/
+local.properties
+*.apk
+*.ap_
+*.aab
+app-release-signed.apk
+app-release-aligned.apk
+*.idsig
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# OS
+Thumbs.db
+*.swp
+*~
+
+# Embedded git repos (use submodules instead)
+app/src/main/cpp/deps/OpenCC
+app/src/main/cpp/deps/librime-lua-deps
+app/src/main/cpp/deps/librime-lua
+app/src/main/cpp/deps/librime-octagram
+app/src/main/cpp/deps/librime-predict
+app/src/main/cpp/deps/librime
+app/src/main/cpp/deps/llama.cpp
+app/src/main/cpp/deps/snappy
