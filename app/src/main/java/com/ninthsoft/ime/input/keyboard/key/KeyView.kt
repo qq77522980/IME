@@ -479,11 +479,33 @@ class ImageKeyView(
         imageResource = def.src
     }
 
+    val altTextView = if (def.altText != null) {
+        TextView(ctx).apply {
+            text = def.altText
+            setTextColor(colors.specialKeyText)
+            textSize = 14f
+            typeface = android.graphics.Typeface.DEFAULT_BOLD
+            setPadding(0, ctx.dp(8), 0, 0)
+        }
+    } else null
+
     init {
         appearanceView.apply {
             add(img, lParams(wrapContent, wrapContent) {
                 centerInParent()
             })
+            if (altTextView != null) {
+                add(altTextView, lParams(wrapContent, wrapContent))
+            }
+        }
+
+        if (altTextView != null) {
+            altTextView.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                startToStart = parentId
+                endToEnd = parentId
+                bottomToBottom = parentId
+                horizontalBias = 0.5f
+            }
         }
     }
 }

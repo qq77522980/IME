@@ -170,10 +170,11 @@ fun schemaSwitchKey(percentWidth: Float): KeyDef = KeyDef(
         viewId = KeyView.button_lang,
         percentWidth = percentWidth,
         variant = Variant.Alternative,
+        altText = ".",
     ),
     behaviors = setOf(
         KeyDef.Behavior.Press(KeyboardAction.ToggleKeyboardLayout),
-        KeyDef.Behavior.LongPress(KeyboardAction.ShowInputMethodPickerAction),
+        KeyDef.Behavior.LongPress(KeyboardAction.CommitAction(".")),
     ),
 )
 

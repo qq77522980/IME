@@ -76,6 +76,7 @@ open class KeyDef(
             border: Border = Border.Default,
             margin: Boolean = true,
             viewId: Int = -1,
+            val altText: String? = null,
         ) : Appearance(percentWidth, variant, border, margin, viewId)
 
         class ImageText(
