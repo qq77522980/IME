@@ -54,8 +54,8 @@ class NumberKeyboard(
                 miniSpaceKey()
             ),
             listOf(
-                resumeLayoutKey("返回", percentWidth = 0.15f),
                 symbolSwitchKey(0.13f),
+                resumeLayoutKey("返回", percentWidth = 0.15f),
                 commitKey(",", variant = Variant.Alternative, percentWidth = 0.10333f),
                 commitKey("0", percentWidth = 0.23333f, variant = Variant.Alternative),
                 commitKey(".", percentWidth = 0.13f, variant = Variant.Alternative),
